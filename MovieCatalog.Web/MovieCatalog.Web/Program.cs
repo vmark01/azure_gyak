@@ -4,7 +4,7 @@ using MovieCatalogApi.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
-var connectionString = builder.Configuration.GetConnectionString("DBESME4O");
+var connectionString = builder.Configuration.GetConnectionString("AZURE_SQL_CONNECTIONSTRING");
 
 builder.Services.AddDbContext<MovieCatalogDbContext>(options =>
     options.UseSqlServer(connectionString));
